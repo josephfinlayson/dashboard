@@ -5,12 +5,13 @@ defmodule Iscblup do
 #   require Logger
 #    plug Plug.Logger, log: :debug
 
-     @gethttp "https://httpbin.org/get"
+     @gethttp "https://teibs.internetbanka.cz/caapi/proxy/hello"
 
      plug Tesla.Middleware.BaseUrl, @gethttp
      plug Tesla.Middleware.Headers, %{"User-Agent" => "blah"}
      plug Tesla.Middleware.JSON
-     adapter Tesla.Adapter.Hackney
+     adapter :hackney, [ssl_options: []]
+     #adapter Tesla.Adapter.Hackney
 
   def start_link do
     Agent.start_link(fn -> %{isUp: false, minutesUp: 0, minutesDown: 0 } end,  name: __MODULE__ )
@@ -36,8 +37,8 @@ defmodule Iscblup do
 
   def isTeibsUp() do
     getResults=get("")
-
-    if !getResults.status !== "200" do
+	IO.inspect(getResults)
+    if getResults.status !== 200 do
         Agent.update(__MODULE__, fn (map) -> %{map | :isUp => false} end)
     else
 
