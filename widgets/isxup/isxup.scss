@@ -1,0 +1,59 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+
+$background-color-sad: #ec4339;
+$background-color: #42c72d;
+
+$title-color:       rgba(255, 255, 255, 0.7);
+$moreinfo-color:    rgba(255, 255, 255, 0.7);
+$updated-at-color:  rgba(0, 0, 0, 0.3);
+
+// ----------------------------------------------------------------------------
+// Widget-text styles
+// ----------------------------------------------------------------------------
+.widget-isxup {
+
+  background-color: $background-color;
+
+  .title {
+    color: $title-color;
+  }
+
+  .more-info {
+    color: $moreinfo-color;
+  }
+
+  .updated-at {
+    color: $updated-at-color;
+  }
+
+  & h3 {
+    font-size: 25px;
+  }
+  .container {
+    display: flex;
+    width: 97%;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+  }
+  .right-block, .left-block {
+    margin-bottom: 12px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .right-block {
+    padding-right: 50px;
+
+  }
+  .left-block-block {
+    padding-right: 50px;
+  }
+
+  &.status-false  {
+    background-color: $background-color-sad !important;
+  }
+
+}

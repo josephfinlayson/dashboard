@@ -1,0 +1,25 @@
+<div class="gridster">
+    <ul>
+        <li data-row="1" data-col="1" data-sizex="4" data-sizey="2">
+
+            <div class="widget-welcome"
+                 data-widget="isxup"
+                 data-source="iscblup"
+                 data-title="Hello"
+                 data-text="This is your shiny new dashboard."></div>
+        </li>
+
+        <!--<li data-row="1" data-col="1" data-sizex="4" data-sizey="1">-->
+
+            <!--<div class="widget-welcome"-->
+                 <!--data-widget="Text"-->
+                 <!--data-source="phrases"-->
+                 <!--data-title="Hello"-->
+                 <!--data-text="This is your shinaaay new dashboard."></div>-->
+        <!--</li>-->
+
+
+
+
+    </ul>
+</div>

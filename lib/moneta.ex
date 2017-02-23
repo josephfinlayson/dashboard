@@ -1,0 +1,2 @@
+defmodule Moneta do
+end
