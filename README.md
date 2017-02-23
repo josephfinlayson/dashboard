@@ -1,4 +1,3 @@
-# Moneta
 
 To start your Dashboard:
 
